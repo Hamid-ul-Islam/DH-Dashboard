@@ -2,9 +2,7 @@ import clientPromise from '@/lib/mongodb'
 import { MongoDBAdapter } from '@auth/mongodb-adapter'
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
-const adminEmails = [
-  "hamidthede@gmail.com",
-];
+const adminEmails = process.env.ADMINS
 
 export default NextAuth({
   providers: [
