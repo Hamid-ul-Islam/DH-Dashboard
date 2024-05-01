@@ -32,6 +32,7 @@ export default function Product({
   const uploadImagesQueue = [];
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(selectedCategory || "");
+  const [isDeliveryFree, setIsDeliveryFree] = useState(false);
 
 
   useEffect(() => {
@@ -60,6 +61,7 @@ export default function Product({
       rating,
       stock,
       discount,
+      isDeliveryFree,
     };
     if (_id) {
       await axios.put("/api/products", { ...data, _id });
@@ -338,6 +340,12 @@ export default function Product({
               onChange={(ev) => setDiscount(ev.target.value)}
             />
           </div>
+        </div>
+        <div className="grid grid-cols-2 gap-4">
+          <input
+            type="checkbox"
+            onChange={(e) => setIsDeliveryFree(e.target.checked)}
+          />
         </div>
 
         {/* Price input */}

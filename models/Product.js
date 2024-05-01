@@ -9,10 +9,11 @@ const ProductSchema = new Schema(
     brand: { type: String },
     stock: { type: Number },
     rating: { type: Number },
-    discountPercentage: { type: Number, default:0 },
+    discountPercentage: { type: Number, default: 0 },
     images: [{ type: String }],
     thumbnail: { type: String },
     category: { type: String, default: "uncategorized" },
+    isDeliveryFree: { type: Boolean },
   },
   { Timestamp: true }
 );

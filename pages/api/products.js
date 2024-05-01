@@ -17,6 +17,7 @@ export default async function handle(req, res) {
       brand,
       discount,
       rating,
+      isDeliveryFree,
     } = req.body;
 
     const productDoc = await Product.create({
@@ -30,6 +31,7 @@ export default async function handle(req, res) {
       stock,
       discountPercentage: discount,
       rating,
+      isDeliveryFree,
     });
 
     res.json(productDoc);
@@ -55,6 +57,7 @@ export default async function handle(req, res) {
       stock,
       discount,
       rating,
+      isDeliveryFree,
     } = req.body;
     await Product.updateOne(
       { _id },
@@ -69,6 +72,7 @@ export default async function handle(req, res) {
         stock,
         discountPercentage: discount,
         rating,
+        isDeliveryFree,
       }
     );
     res.json(true);
