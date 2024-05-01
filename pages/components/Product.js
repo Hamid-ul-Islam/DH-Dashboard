@@ -342,9 +342,10 @@ export default function Product({
             />
           </div>
         </div>
-        <div className="flex items-center my-2">
+        <div className="flex items-center my-2 gap-2">
           <label>Free Delivery: </label>
           <input
+            className="p-2"
             type="checkbox"
             onChange={(e) => setIsDeliveryFree(e.target.checked)}
           />
