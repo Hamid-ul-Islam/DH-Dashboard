@@ -17,6 +17,7 @@ export default function Product({
   rating: existingRating,
   stock: existingStock,
   discountPercentage: existingDiscount,
+  isDeliveryFree: existingDelivery
 }) {
   const [title, setTitle] = useState(existingTitle || "");
   const [description, setDescription] = useState(existingDescription || "");
@@ -32,7 +33,7 @@ export default function Product({
   const uploadImagesQueue = [];
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(selectedCategory || "");
-  const [isDeliveryFree, setIsDeliveryFree] = useState(false);
+  const [isDeliveryFree, setIsDeliveryFree] = useState(existingDelivery || false);
 
 
   useEffect(() => {
@@ -341,7 +342,8 @@ export default function Product({
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="flex items-center my-2">
+          <label>Free Delivery: </label>
           <input
             type="checkbox"
             onChange={(e) => setIsDeliveryFree(e.target.checked)}
