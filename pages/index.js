@@ -25,7 +25,6 @@ import {
   Table,
 } from "@/components/ui/table";
 
-
 const formatPrice = (price) => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
@@ -66,7 +65,7 @@ export default function Home() {
   if (session) {
     return (
       <>
-        <main className="flex-1 bg-gray-100 dark:bg-gray-950 p-6 md:p-8">
+        <main className=" dark:bg-gray-950 p-6 md:p-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <Card>
               <CardHeader>
@@ -290,7 +289,6 @@ export default function Home() {
     </>
   );
 }
-
 
 // function BarChart(props) {
 //   return (
