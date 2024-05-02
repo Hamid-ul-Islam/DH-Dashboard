@@ -10,15 +10,21 @@
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^2.0.2",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-slot": "^1.0.2",
     "axios": "^1.5.1",
+    "class-variance-authority": "^0.7.0",
     "cloudinary": "^1.41.0",
+    "clsx": "^2.1.1",
     "cordova-plugin-file": "^8.0.0",
     "froala-editor": "^4.2.0",
+    "lucide-react": "^0.377.0",
     "mongodb": "^6.2.0",
     "mongoose": "^7.6.3",
     "multiparty": "^4.2.3",
     "next": "13.5.6",
     "next-auth": "^4.24.3",
+    "nivo": "^0.31.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
@@ -26,7 +32,9 @@
     "react-sortable": "^2.0.0",
     "react-sortablejs": "^6.1.4",
     "react-spinners": "^0.13.8",
-    "sortablejs": "^1.15.2"
+    "sortablejs": "^1.15.2",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "autoprefixer": "^10",
